@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Design Proposal | May 14, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --red: #B83A3A;
+            --red-light: #D46565;
+            --terracotta: #C67B5C;
+            --deep-green: #2C4A3E;
+            --forest: #1A332A;
+            --ivory: #F8F6F1;
+            --cream: #EDE8E0;
+            --sand: #C9B8A0;
+            --charcoal: #2B2B2B;
+            --warm-gray: #6B6B6B;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--ivory);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .serif { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-weight: 300;
+        }
+        
+        /* Logo - Fixed */
+        .logo-fixed {
+            position: fixed;
+            top: 32px;
+            left: 32px;
+            z-index: 1000;
+            height: 45px;
+            width: auto;
+            filter: brightness(0.2);
+            opacity: 0.9;
+            transition: filter 0.3s ease;
+        }
+        
+        .logo-fixed.light {
+            filter: brightness(0) invert(1);
+        }
+        
+        @media (max-width: 768px) {
+            .logo-fixed { height: 38px; top: 20px; left: 20px; }
+        }
+
+        /* Navigation Dots */
+        .nav-dots {
+            position: fixed;
+            right: 32px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .nav-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .nav-dot.active {
+            background: var(--red);
+            transform: scale(1.5);
+        }
+        
+        .nav-dot:hover {
+            background: var(--deep-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(184,58,58,0.3) 0%, rgba(44,74,62,0.4) 100%),
+                        url('https://i.imgur.com/z2PIuHj.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(248,246,241,0.3);
+            backdrop-filter: blur(1px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+        }
+
+        .wedding-date {
+            color: var(--red);
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: clamp(48px, 12vw, 100px);
+            font-weight: 300;
+            line-height: 0.9;
+            margin-bottom: 24px;
+            color: var(--charcoal);
+            letter-spacing: -2px;
+        }
+
+        .hero-title {
+            font-size: clamp(28px, 5vw, 48px);
+            color: var(--red);
+            font-style: italic;
+            display: block;
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            color: var(--warm-gray);
+            max-width: 500px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .designer-credit {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            text-align: right;
+            z-index: 50;
+        }
+        
+        @media (max-width: 768px) {
+            .designer-credit { 
+                bottom: 24px; 
+                right: 24px;
+                left: 24px;
+                text-align: center;
+            }
+        }
+
+        .designer-credit p:first-child {
+            color: var(--red);
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .designer-credit p:last-child {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 24px;
+            color: var(--charcoal);
+            font-weight: 400;
+        }
+
+        /* Section Dividers */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--red), transparent);
+            margin: 60px auto;
+            max-width: 200px;
+            opacity: 0.4;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-label {
+            color: var(--red);
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+        
+        .section-label::before,
+        .section-label::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--red);
+            opacity: 0.3;
+        }
+
+        h2 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 300;
+            color: var(--charcoal);
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .concept-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(22px, 3vw, 32px);
+            font-weight: 300;
+            line-height: 1.7;
+            color: var(--warm-gray);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Two Column Layout for Venues */
+        .venues-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 80px;
+            margin-top: 60px;
+        }
+        
+        @media (min-width: 1024px) {
+            .venues-container { 
+                grid-template-columns: 1fr 1fr; 
+                gap: 60px;
+            }
+        }
+
+        .venue-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            border: 1px solid var(--cream);
+        }
+
+        .venue-image {
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .venue-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        
+        .venue-card:hover .venue-image img {
+            transform: scale(1.05);
+        }
+
+        .venue-content {
+            padding: 40px;
+        }
+
+        .venue-tag {
+            display: inline-block;
+            background: var(--red);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .venue-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            margin-bottom: 16px;
+            color: var(--charcoal);
+            font-weight: 400;
+        }
+
+        .venue-description {
+            color: var(--warm-gray);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .venue-details {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .venue-detail {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--deep-green);
+            font-weight: 500;
+        }
+
+        /* Color Palette - With Red */
+        .colors {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .colors { grid-template-columns: repeat(5, 1fr); }
+        }
+
+        .color-box {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            border: 1px solid var(--cream);
+        }
+
+        .color-box:hover { 
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        .color-swatch {
+            height: 160px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .color-swatch::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.03) 100%);
+        }
+
+        .color-info {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .color-name {
+            font-size: 12px;
+            color: var(--warm-gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .color-hex {
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 13px;
+            color: var(--charcoal);
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* Gallery - Asymmetric Layout */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .gallery { 
+                grid-template-columns: repeat(12, 1fr);
+                grid-auto-rows: 300px;
+            }
+        }
+
+        .image-card {
+            position: relative;
+            background: var(--cream);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        @media (min-width: 768px) {
+            .image-card:nth-child(1) { grid-column: span 6; grid-row: span 2; }
+            .image-card:nth-child(2) { grid-column: span 6; }
+            .image-card:nth-child(3) { grid-column: span 6; }
+            .image-card:nth-child(4) { grid-column: span 4; }
+            .image-card:nth-child(5) { grid-column: span 4; }
+            .image-card:nth-child(6) { grid-column: span 4; }
+            .image-card:nth-child(7) { grid-column: span 5; grid-row: span 2; }
+            .image-card:nth-child(8) { grid-column: span 7; }
+            .image-card:nth-child(9) { grid-column: span 7; }
+            .image-card:nth-child(10) { grid-column: span 12; height: 400px; }
+        }
+
+        .image-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .image-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px;
+            background: linear-gradient(to top, rgba(43,43,43,0.9) 0%, transparent 100%);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.5s ease;
+        }
+
+        .image-card:hover .image-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .image-label {
+            color: var(--red-light);
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .image-title {
+            font-family: 'Cormorant Garamond', serif;
+            color: white;
+            font-size: 28px;
+            line-height: 1.2;
+            font-weight: 300;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: var(--red);
+            opacity: 0.3;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            text-align: left;
+        }
+        
+        .timeline-time {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            color: var(--red);
+            margin-bottom: 8px;
+        }
+        
+        .timeline-title {
+            font-size: 18px;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .timeline-location {
+            font-size: 14px;
+            color: var(--warm-gray);
+            font-style: italic;
+        }
+        
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background: var(--red);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 3px solid var(--ivory);
+            box-shadow: 0 0 0 1px var(--red);
+        }
+
+        /* Save the Date Badge */
+        .save-date {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            background: white;
+            padding: 20px 28px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            z-index: 100;
+            text-align: center;
+            border: 1px solid var(--cream);
+        }
+        
+        .save-date-label {
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--warm-gray);
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+        
+        .save-date-date {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            color: var(--red);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .save-date {
+                bottom: 20px;
+                right: 20px;
+                left: 20px;
+                position: relative;
+                margin-top: 40px;
+            }
+            .nav-dots { display: none; }
+            .timeline::before { left: 20px; }
+            .timeline-item { flex-direction: column !important; align-items: flex-start; padding-left: 50px; }
+            .timeline-content { width: 100%; text-align: left !important; }
+            .timeline-dot { left: 20px; transform: none; }
+        }
+
+        /* Footer */
+        footer {
+            padding: 100px 24px;
+            background: var(--forest);
+            text-align: center;
+            position: relative;
+            color: white;
+        }
+
+        .footer-logo {
+            height: 50px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .footer-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(32px, 6vw, 56px);
+            margin-bottom: 8px;
+            font-weight: 300;
+            font-style: italic;
+        }
+        
+        .footer-date {
+            color: var(--red-light);
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .footer-designer p:first-child {
+            color: var(--sand);
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .footer-designer p:last-child {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .footer-role {
+            color: rgba(255,255,255,0.5);
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .copyright {
+            color: rgba(255,255,255,0.3);
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--red);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Logo -->
+    <img src="https://i.imgur.com/uJqy10F.jpeg" alt="Logo" class="logo-fixed" id="mainLogo">
+
+    <!-- Navigation Dots -->
+    <div class="nav-dots">
+        <div class="nav-dot active" onclick="scrollToSection(0)"></div>
+        <div class="nav-dot" onclick="scrollToSection(1)"></div>
+        <div class="nav-dot" onclick="scrollToSection(2)"></div>
+        <div class="nav-dot" onclick="scrollToSection(3)"></div>
+        <div class="nav-dot" onclick="scrollToSection(4)"></div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="section-0" style="padding: 0; max-width: 100%;">
+        <div class="hero-content">
+            <p class="wedding-date fade-in">May 14, 2026</p>
+            
+            <h1 class="fade-in" style="transition-delay: 0.2s;">
+                <span class="hero-title serif">Wedding Celebration</span>
+            </h1>
+            
+            <p class="hero-subtitle fade-in" style="transition-delay: 0.4s;">
+                Two sacred spaces, one unforgettable day. From heartfelt ceremony to elegant evening celebration.
+            </p>
+        </div>
+        
+        <div class="designer-credit fade-in" style="transition-delay: 0.6s;">
+            <p>Designed by</p>
+            <p>Mohamed Tunis</p>
+        </div>
+    </section>
+
+    <!-- VENUES SECTION -->
+    <section id="section-1">
+        <div class="section-header">
+            <p class="section-label fade-in">The Locations</p>
+            <h2 class="fade-in serif">Two Perfect Spaces</h2>
+            <p class="concept-text fade-in">
+                A day divided between sacred vows and celebratory feast. Each venue chosen for its unique atmosphere, together creating a complete story of love.
+            </p>
+        </div>
+
+        <div class="venues-container">
+            <!-- Wedding Place -->
+            <div class="venue-card fade-in">
+                <div class="venue-image">
+                    <img src="https://i.imgur.com/z2PIuHj.jpeg" alt="Wedding Place">
+                </div>
+                <div class="venue-content">
+                    <span class="venue-tag">Ceremony</span>
+                    <h3 class="venue-title serif">The Wedding Place</h3>
+                    <p class="venue-description">
+                        Where promises are made and forever begins. A serene setting bathed in natural light, designed for intimate moments and heartfelt vows.
+                    </p>
+                    <div class="venue-details">
+                        <div class="venue-detail">
+                            <span>🕊</span>
+                            <span>Afternoon Light</span>
+                        </div>
+                        <div class="venue-detail">
+                            <span>🌿</span>
+                            <span>Garden Views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dinner Place -->
+            <div class="venue-card fade-in" style="transition-delay: 0.2s;">
+                <div class="venue-image">
+                    <img src="https://i.imgur.com/EbLSY2f.jpeg" alt="Dinner Place">
+                </div>
+                <div class="venue-content">
+                    <span class="venue-tag" style="background: var(--deep-green);">Reception</span>
+                    <h3 class="venue-title serif">The Dinner Place</h3>
+                    <p class="venue-description">
+                        As day turns to evening, celebration unfolds. Warm lighting, elegant tablescapes, and an atmosphere designed for lingering conversations and joyful dancing.
+                    </p>
+                    <div class="venue-details">
+                        <div class="venue-detail">
+                            <span>✨</span>
+                            <span>Ambient Light</span>
+                        </div>
+                        <div class="venue-detail">
+                            <span>🍽</span>
+                            <span>Intimate Dining</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- COLOR PALETTE -->
+    <section id="section-2">
+        <div class="section-header">
+            <p class="section-label fade-in">Color Palette</p>
+            <h2 class="fade-in serif">Red, Forest & Ivory</h2>
+        </div>
+        
+        <div class="colors">
+            <div class="color-box fade-in" onclick="copyColor('#F8F6F1')">
+                <div class="color-swatch" style="background: #F8F6F1; border: 1px solid rgba(0,0,0,0.05);"></div>
+                <div class="color-info">
+                    <p class="color-name">Ivory</p>
+                    <p class="color-hex">#F8F6F1</p>
+                </div>
+            </div>
+            
+            <div class="color-box fade-in" onclick="copyColor('#C9B8A0')" style="transition-delay: 0.1s;">
+                <div class="color-swatch" style="background: #C9B8A0;"></div>
+                <div class="color-info">
+                    <p class="color-name">Warm Sand</p>
+                    <p class="color-hex">#C9B8A0</p>
+                </div>
+            </div>
+            
+            <div class="color-box fade-in" onclick="copyColor('#B83A3A')" style="transition-delay: 0.2s;">
+                <div class="color-swatch" style="background: #B83A3A;"></div>
+                <div class="color-info">
+                    <p class="color-name">Deep Red</p>
+                    <p class="color-hex">#B83A3A</p>
+                </div>
+            </div>
+            
+            <div class="color-box fade-in" onclick="copyColor('#C67B5C')" style="transition-delay: 0.3s;">
+                <div class="color-swatch" style="background: #C67B5C;"></div>
+                <div class="color-info">
+                    <p class="color-name">Terracotta</p>
+                    <p class="color-hex">#C67B5C</p>
+                </div>
+            </div>
+            
+            <div class="color-box fade-in" onclick="copyColor('#2C4A3E')" style="transition-delay: 0.4s;">
+                <div class="color-swatch" style="background: #2C4A3E;"></div>
+                <div class="color-info">
+                    <p class="color-name">Deep Forest</p>
+                    <p class="color-hex">#2C4A3E</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WEDDING PLACE GALLERY -->
+    <section id="section-3" style="background: linear-gradient(to bottom, transparent, rgba(44,74,62,0.03));">
+        <div class="section-header">
+            <p class="section-label fade-in">The Wedding Place</p>
+            <h2 class="fade-in serif">Sacred Moments</h2>
+        </div>
+        
+        <div class="gallery">
+            <div class="image-card fade-in">
+                <img src="https://i.imgur.com/z2PIuHj.jpeg" alt="Wedding Place" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-label">Ceremony</p>
+                    <p class="image-title">The Vows</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.1s;">
+                <img src="https://i.imgur.com/ewb3H04.jpeg" alt="Wedding Detail" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Sacred Space</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.2s;">
+                <img src="https://i.imgur.com/fIiKgJM.jpeg" alt="Wedding Setting" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Natural Light</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.1s;">
+                <img src="https://i.imgur.com/JbEzZrQ.jpeg" alt="Wedding Decor" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Floral Arrangements</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.2s;">
+                <img src="https://i.imgur.com/hzko8rc.jpeg" alt="Wedding Atmosphere" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Intimate Gathering</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.3s;">
+                <img src="https://i.imgur.com/o9JnGOI.jpeg" alt="Wedding Moments" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Pure Emotion</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.1s;">
+                <img src="https://i.imgur.com/df0mwC6.jpeg" alt="Wedding Details" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-label">Details</p>
+                    <p class="image-title">Thoughtful Touches</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.2s;">
+                <img src="https://i.imgur.com/vCgMYah.jpeg" alt="Wedding Beauty" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Timeless Beauty</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.1s;">
+                <img src="https://i.imgur.com/e5FOtTv.jpeg" alt="Wedding Scene" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Garden Serenity</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.2s;">
+                <img src="https://i.imgur.com/npJB4KY.jpeg" alt="Wedding Finale" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">New Beginnings</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.3s;">
+                <img src="https://i.imgur.com/dXhDWMs.jpeg" alt="Wedding Exit" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Joyful Exit</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.2s;">
+                <img src="https://i.imgur.com/4867olY.jpeg" alt="Wedding Complete" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-label">The Ceremony</p>
+                    <p class="image-title" style="font-size: 36px;">Forever Begins</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DINNER PLACE GALLERY -->
+    <section id="section-4">
+        <div class="section-header">
+            <p class="section-label fade-in">The Dinner Place</p>
+            <h2 class="fade-in serif">Evening Celebration</h2>
+        </div>
+        
+        <div class="gallery">
+            <div class="image-card fade-in">
+                <img src="https://i.imgur.com/EbLSY2f.jpeg" alt="Dinner Place" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-label">Reception</p>
+                    <p class="image-title">The Celebration</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.1s;">
+                <img src="https://i.imgur.com/7SJffLE.jpeg" alt="Dinner Setup" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Tablescapes</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.2s;">
+                <img src="https://i.imgur.com/OoYcC64.jpeg" alt="Dinner Ambiance" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Warm Light</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.1s;">
+                <img src="https://i.imgur.com/nqo64LH.jpeg" alt="Dinner Decor" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Elegant Details</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.2s;">
+                <img src="https://i.imgur.com/1jIJgrM.jpeg" alt="Dinner Atmosphere" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Intimate Dining</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.3s;">
+                <img src="https://i.imgur.com/KjxmRUi.jpeg" alt="Dinner Setting" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Candlelight</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.1s;">
+                <img src="https://i.imgur.com/nZsEeJW.jpeg" alt="Dinner Details" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-label">Evening</p>
+                    <p class="image-title">Golden Hour</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.2s;">
+                <img src="https://i.imgur.com/zYsNLOH.jpeg" alt="Dinner Beauty" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Luminous</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.1s;">
+                <img src="https://i.imgur.com/TAWKnDQ.jpeg" alt="Dinner Scene" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-title">Togetherness</p>
+                </div>
+            </div>
+            
+            <div class="image-card fade-in" style="transition-delay: 0.2s;">
+                <img src="https://i.imgur.com/1G9peoE.jpeg" alt="Dinner Finale" loading="lazy">
+                <div class="image-overlay">
+                    <p class="image-label">The Celebration</p>
+                    <p class="image-title" style="font-size: 36px;">Love & Laughter</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section id="section-5" style="background: linear-gradient(to bottom, rgba(184,58,58,0.05), transparent);">
+        <div class="section-header">
+            <p class="section-label fade-in">The Day</p>
+            <h2 class="fade-in serif">Timeline of Events</h2>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <div class="timeline-time">14:00</div>
+                    <div class="timeline-title">Guest Arrival</div>
+                    <div class="timeline-location">The Wedding Place</div>
+                </div>
+                <div class="timeline-dot"></div>
+                <div style="width: 45%;"></div>
+            </div>
+            
+            <div class="timeline-item fade-in" style="transition-delay: 0.1s;">
+                <div style="width: 45%;"></div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-time">15:00</div>
+                    <div class="timeline-title">Ceremony</div>
+                    <div class="timeline-location">The Wedding Place</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item fade-in" style="transition-delay: 0.2s;">
+                <div class="timeline-content">
+                    <div class="timeline-time">16:30</div>
+                    <div class="timeline-title">Cocktail Hour</div>
+                    <div class="timeline-location">Garden Terrace</div>
+                </div>
+                <div class="timeline-dot"></div>
+                <div style="width: 45%;"></div>
+            </div>
+            
+            <div class="timeline-item fade-in" style="transition-delay: 0.3s;">
+                <div style="width: 45%;"></div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-time">18:00</div>
+                    <div class="timeline-title">Dinner Reception</div>
+                    <div class="timeline-location">The Dinner Place</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item fade-in" style="transition-delay: 0.4s;">
+                <div class="timeline-content">
+                    <div class="timeline-time">21:00</div>
+                    <div class="timeline-title">Dancing & Celebration</div>
+                    <div class="timeline-location">The Dinner Place</div>
+                </div>
+                <div class="timeline-dot"></div>
+                <div style="width: 45%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Save the Date -->
+    <div class="save-date">
+        <div class="save-date-label">Save the Date</div>
+        <div class="save-date-date">05.14.2026</div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="https://i.imgur.com/uJqy10F.jpeg" alt="Logo" class="footer-logo">
+        
+        <p class="footer-title serif">Wedding Celebration</p>
+        <p class="footer-date">May 14, 2026</p>
+        
+        <div class="footer-designer">
+            <p>Designed by</p>
+            <p>Mohamed Tunis</p>
+        </div>
+        
+        <p class="footer-role">Wedding Design & Styling</p>
+        
+        <p class="copyright">Two Places, One Love — Wedding Design Proposal</p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">Color copied to clipboard</div>
+
+    <!-- Scripts -->
+    <script>
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Copy color function
+        function copyColor(hex) {
+            navigator.clipboard.writeText(hex).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2500);
+            });
+        }
+
+        // Navigation dots
+        const sections = document.querySelectorAll('section');
+        const dots = document.querySelectorAll('.nav-dot');
+        
+        function scrollToSection(index) {
+            sections[index].scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Update active dot on scroll
+        window.addEventListener('scroll', () => {
+            let current = 0;
+            sections.forEach((section, index) => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 500) {
+                    current = index;
+                }
+            });
+            
+            dots.forEach((dot, index) => {
+                if (index === current) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+            
+            // Logo color change based on background
+            const logo = document.getElementById('mainLogo');
+            if (current === 0 || current === 5) {
+                logo.classList.add('light');
+            } else {
+                logo.classList.remove('light');
+            }
+        });
+    </script>
+
+</body>
+</html>
